@@ -176,9 +176,11 @@ void UHD_Init(void)
 
 	uhd_state = UHD_STATE_NO_VBUS;
 
+#ifndef USB_HOSTEN_UNUSED	//2022/09/01 ipc:unused
 	// Put VBUS on USB port
 	pinMode( PIN_USB_HOST_ENABLE, OUTPUT );
 	digitalWrite( PIN_USB_HOST_ENABLE, HIGH );
+#endif
 
 	uhd_enable_connection_int();
 

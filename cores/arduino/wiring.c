@@ -150,7 +150,8 @@ void init( void )
 	DAC->CTRLA.bit.SWRST = 1;
 	while ( DAC->SYNCBUSY.bit.SWRST == 1 ); // Wait for synchronization of registers between the clock domains
 	
-	DAC->CTRLB.reg = DAC_CTRLB_REFSEL_VREFPU; // TODO: fix this once silicon bug is fixed
+	//DAC->CTRLB.reg = DAC_CTRLB_REFSEL_VREFPU; // TODO: fix this once silicon bug is fixed
+	DAC->CTRLB.bit.REFSEL = 1;      		// 2022/09 interplan : Vref=VDDに設定 
 	
 	//set refresh rates
 	DAC->DACCTRL[0].bit.REFRESH = 2;

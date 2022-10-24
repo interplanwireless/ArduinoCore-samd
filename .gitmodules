@@ -4,3 +4,7 @@
 [submodule "libraries/Adafruit_ZeroDMA"]
 	path = libraries/Adafruit_ZeroDMA
 	url = https://github.com/adafruit/Adafruit_ZeroDMA
+[submodule "libraries/IPCBox"]
+	path = libraries/IPCBox
+	url = https://github.com/interplanwireless/IPCBox_Arduino
+	branch = main
